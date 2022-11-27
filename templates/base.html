@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>name</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+<img  src="{{ url_for('static', filename='images/logo.jpg')}}"  class="imm">
+<table align="center">
+  <tr>
+    <th>Name</th>
+    <th>status</th>
+    <th>courses completed</th>
+    <th>quests completed</th>
+  </tr>
+  {%for j in range(120)%}
+  <tr>
+    <td>{{ls[0][j]}}</td>
+    <td>{{ls[1][j]}}</td>
+    <td>{{ls[2][j]}}</td>
+    <td>{{ls[3][j]}}</td>
+  </tr>
+  {% endfor %}
+  
+
+</table>
+
+</body>
+</html>
